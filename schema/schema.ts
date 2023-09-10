@@ -8,8 +8,8 @@ import {
 
 export const users = pgTable('users', {
   id: serial('user_id').primaryKey(),
-  username: varchar('username'),
-  email: varchar('email'),
+  username: varchar('username').unique(),
+  email: varchar('email').unique(),
   password: varchar('password'),
   firstName: varchar('first_name'),
   lastName: varchar('last_name'),

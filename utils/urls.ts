@@ -1,1 +1,5 @@
-export const DB_CONNECTION = 'postgresql://localhost:5432/';
+import * as dotenv from "dotenv"
+dotenv.config()
+
+const PG_CONNECTION = process.env.DB_URL
+export default PG_CONNECTION
